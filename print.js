@@ -10,7 +10,7 @@
  const footer = source.querySelector('.cv-footer');
  const make = index => {
   if (sheets[index]) return sheets[index];
-  const sheet = doc.createElement('section'); sheet.className = 'cv-sheet';
+  const sheet = doc.createElement('section'); sheet.className = 'cv-sheet';sheet.setAttribute('style',source.getAttribute('style')||'');
   const side = doc.createElement('aside'); side.className = 'cv-sidebar cv-page-side'; side.dir = dir;
   const main = doc.createElement('div'); main.className = 'cv-body cv-page-main'; main.dir = dir;
   const foot = footer.cloneNode(true); foot.className = 'cv-footer cv-page-footer'; foot.dir = 'ltr';
